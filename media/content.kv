@@ -1,0 +1,36 @@
+<Incrementer>:
+    padding:10
+    canvas:
+        Color:
+            rgba: (232/255, 220/255, 252/255,1)
+        Rectangle:
+            pos:self.pos
+            size:self.size
+
+    Button:
+        id:nginxButton
+        background_normal: 'media/nginx.png'
+        on_release: app.setNginx()
+        size_hint: 0.8,0.3
+        pos_hint: {'center_x':0.5,'top':0.9}
+
+    Button:
+        id:mysqlButton
+        background_normal: 'media/mysql.png'
+        on_release: app.setMySql()
+        size_hint: 0.8,0.3
+        pos_hint: {'center_x':0.5,'top':0.58}
+
+    BoxLayout:
+        size_hint: 0.7,0.25
+        pos_hint: {'center_x':0.5,'top':0.28}
+        padding:15
+        orientation:'horizontal'
+
+        Button:
+            background_normal:'media/localhost.png'
+            on_release:app.openLocalhost()
+
+        Button:
+            background_normal:'media/PhpMyAdmin_logo.png'
+            on_release:app.openPMA()
